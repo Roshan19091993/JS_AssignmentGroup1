@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         li{
+            font-size:55px;
+            background-color: yellow;
+          }
+          .calculate{
+            display:inline-block;
+            justify-content: center;
+            align-items: center;
+            margin:60px;
+            width: 450px;
+            padding: 80px;
+            font-size: 30px;
+            font-weight: bold;
+            background-color: #333;
+            color: #fff;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+          }
+          Input{
+            padding: 3px;
+            font-size: 40px;
+            margin-right: 20px;
+        
+          }
+          select{
+            padding: 10px;
+            font-size: 40px;
+          }
+          button{
+            padding: 50px 200px;
+            border: none;
+            cursor: pointer;
+            font-size: 25px;
+            color: #fff;
+            margin-left: 160px;
+            border-radius: 50px;
+            background-color: blue;
+          }
+          #result{
+            width: 600px;
+            height: 200px;
+            font-size: 50px;
+            border: 2px solid black;
+            background-color: yellow;
+            margin-top: 100px;
+            margin-left: 100px;
+            color: black;
+            border-radius: 20px;
+          }
+      
+    </style>
+</head>
+<body>
+    <li>10. JavaScript Operators
+        Assignment:
+        Create a calculator function that accepts
+         two numbers and an operator 
+         (addition, subtraction, multiplication, or division)
+         and returns the result. Use appropriate JavaScript operators for the calculations.
+    </li>
+    <div class="calculate" id="cal-c">
+    <input type="number" id="num1" placeholder="Enter Number 1">
+    <input type="number" id="num2" placeholder="Enter Number 2">
+
+    <select id="operator">
+        <option value="addition">Addition</option>
+        <option value="subtraction">Subtraction</option>
+        <option value="multiplication">Multiplication</option>
+        <option value="division">Division</option>
+
+    </select>
+</div>
+    <button onclick="calculateAndDisplay()">Calculate</button>
+
+    <p id="result">
+        Result will appear here.
+    </p>
+
+    <script>
+        function calculate(num1,num2,operator){
+            switch(operator){
+                case 'addition':
+                    return num1 + num2;
+                case'subtraction':
+                return num1 - num2;
+                case'multiplication':
+                return num1 * num2;
+
+                case 'division':
+                    if(num2!=0){
+                        return num1 / num2;
+                    }
+                    else{
+                        return "Error: Division by zero";
+                    }
+                default:
+                    return "Error: Invalid operator";
+
+
+            }
+        }
+        
+        function calculateAndDisplay(){
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var operator = document.getElementById("operator").value;
+
+            var result = calculate(num1, num2, operator);
+            document.getElementById("result").innerText = "Result: " + result;
+
+
+
+        }
+      
+    </script>
+</body>
+</html>

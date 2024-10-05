@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          li{
+            font-size:35px;
+            background-color: yellow;
+          }
+          .DL_Licence{
+            width: 600px;
+            height: 600px;
+            border: 3px solid black;
+            margin-left: 100px;
+            padding: 20px;
+            font-size: 35px;
+            text-align: center;
+            overflow: auto;
+            background-color: yellow;
+            margin-top: 200px;
+            border-radius: 10px;
+          }
+          #result {
+            width: 400px;
+            height: 100px;
+            border: 3px solid black;
+            background-color: aquamarine;
+            font-size: 25px;
+            margin-top: 20px;
+            margin-left: 100px;
+          }
+    </style>
+</head>
+<body>
+    <li>
+    5. JavaScript Syntax
+        Assignment:
+        Write a simple JavaScript program that follows the correct syntax rules. 
+        Include a mix of variable declarations, function definitions, 
+        and control structures.
+         Highlight any syntax errors you might encounter and explain how to fix them.
+    </li>
+    <div class="DL_Licence">
+
+        <h2>Application of conditional statement</h2>
+      
+        <p id="demo">
+            <input type="number" id="ageInput" placeholder="enter age">
+        </p>
+        <button onclick="DL()">Check Age</button>
+        <p id="result">RESULT</p>
+    </div>
+  
+    <script>
+        let name = "AJAY";//let use for variable that can change
+
+        const age = 18;// const use for constant (can not reassign);
+
+        var isMale = true;//var is function scope  and should generally be avoided
+    
+        function greet(person){
+            return `hello ${person}!!`;//template literals using backticks for easy string interpolation
+        }
+        console.log(greet(name));
+
+      function DL (demo){
+        let Age = document.getElementById("ageInput").value;
+        let result = document.getElementById("result");
+        if( Age >= 18){
+            result.innerHTML = "you are eligible for Driving licensed"
+            result.style.color = "green";
+        }
+        else{
+            result.innerHTML = "you are not eligible for DL"
+            result.style.color = "red";
+        }
+    }
+
+    //for  loop
+    for(let i = 0; i <= 5; i++){
+        console.log(`numbers: ${i}`);
+    }
+
+    // function to calculate square of number
+    // here i face error of return
+    //return in same line 
+    //wrong 
+    // const calculateSquare= (num)=>{
+    //     return 
+    //     num * num;
+    // }
+    // corrected below
+    const calculateSquare = (num) => {
+        return num * num;
+    }
+    console.log(calculateSquare(5));
+
+
+
+    const pi=3.14;
+   console.log(pi);
+    pi=4;
+    // Error: Assignment to constant variable can not be reassign once fixed value
+   console.log(pi);
+
+    </script>
+</body>
+</html>

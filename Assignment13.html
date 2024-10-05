@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Data Types find function</title>
+    <style>
+
+        li{
+            font-size:55px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <li>13. JavaScript Data Types
+        Assignment:
+        Create a function that takes a value as input and returns its data type as a string.
+         Use typeof to determine  the type and log results for 
+         different values (e.g., number, string, array, object).
+    </li>
+<div >
+    <script>
+        function Find_dataType(value){
+            if(Array.isArray(value)){
+                return "Array";
+            }
+            return typeof value;
+        }
+      console.log(Find_dataType(42));
+      console.log(Find_dataType("Hello World"));
+      console.log(Find_dataType([1,2,3]));
+      console.log(Find_dataType({name:"John", age:30}));
+      console.log(Find_dataType(true));
+      console.log(Find_dataType(null));
+      console.log(Find_dataType(undefined));
+      console.log(Find_dataType(new Date()));
+      console.log(Find_dataType(function(){console.log('Hello')}));
+    </script>
+    </div>
+</body>
+</html>

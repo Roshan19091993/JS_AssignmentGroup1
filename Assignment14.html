@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Functions takes parameter</title>
+    <style>
+        li{
+            font-size:55px;
+            background-color: yellow;
+        }
+        .jscontainer {
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid black;
+            text-align: center;
+            background-color: lightgray;
+            font-size: 45px;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <li> 14. JavaScript Functions
+        Assignment:
+        Write a JavaScript function that takes two parameters (name and age)
+         and returns a formatted string that says, “Hello,
+         my name is [name] and I am [age] years old.” Test the function with different values.
+    </li>
+<div class="jscontainer">
+    <script>
+        // function to print a formatted string
+        function printFormattedString(name,age){
+            return `Hello, my name is ${name} and I am ${age} years old.`
+        }
+        
+        // test the function with different values
+        document.write(printFormattedString("Akshay",30));
+        document.write("<br/>");
+        document.write(printFormattedString("Ashwin",37));
+        document.write("<br/>");
+        document.write(printFormattedString("Ravi kumar",28));
+    </script>
+</div>
+</body>
+</html>

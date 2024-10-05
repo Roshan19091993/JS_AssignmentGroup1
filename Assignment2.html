@@ -1,0 +1,60 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change background color when page loaded</title>
+    <style>
+        li{
+            margin: 10px;
+            padding: 0;
+            font-size: 80px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+ </head>
+ <body>
+    <h2>JavaScript Assignments2</h2>
+    <li>2. JavaScript Where To
+        Assignment:
+        Create a simple HTML file that includes an external JavaScript file. Write 
+        a function in the JavaScript file that changes the background color of the 
+        webpage when the page is loaded.
+    </li>
+
+    <script>
+    //    window.onload= function () {
+    //         document.body.style.backgroundColor = "red";
+    //     }
+    //     window.onload= function () {
+    //         document.body.style.backgroundColor = "blue";
+    //     }
+    //     window.onload= function () {
+    //         document.body.style.backgroundColor = "green";
+    //     }
+    //     window.onload= function () {
+    //         document.body.style.backgroundColor = "yellow";
+    //     }
+
+    //     }
+
+
+    document.addEventListener("DOMContentLoaded", function(){
+
+        setTimeout(function(){
+            document.body.style.backgroundColor = "red";
+           
+        },1000)
+        setTimeout(function(){
+            document.body.style.backgroundColor = "blue";
+        },2000);
+        setTimeout(function(){
+            document.body.style.backgroundColor = "green";
+        },3000);
+        setTimeout(function(){
+            document.body.style.backgroundColor = "yellow";
+        },4000);
+    })
+    </script>
+ </body>
+ </html>

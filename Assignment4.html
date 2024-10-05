@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Statements Example</title>
+    <style>
+           li{
+            font-size:35px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <li> 4. JavaScript Statements
+        Assignment:
+        Create a script that includes at least five different types of JavaScript 
+        statements (declarations, assignments, conditionals, 
+        loops, and function calls). Document each type with comments explaining what it does.
+    </li>
+
+    <script>
+        // Declaration 
+        let name; 
+        console.log("Declearing variable:"+name);
+        
+        // Assigning  value to name 
+        name = "Ashwin";
+        let age = 30;
+        console.log("Assigning value to name and age variable line 31");
+        console.log("NAME:"+name+"_AND_"+"AGE:"+age);
+        
+    // voting minimum age is 18 yr
+        // Conditional
+        console.log("Applicstion of conditional statement 37 to 40")
+        if( age >= 18 ){
+            console.log("Ashwin eligible for votes ");
+        } else {
+            console.log("Not eligible for votes");
+        }
+        
+        // Loop
+        for(let i = 0; i < 5; i++){
+            console.log("Application of For loop"+i);
+        }
+        
+        // Function declearation and call
+        console.log("Application of function declearation and call line 48 to 50");
+        function myFunction(){
+            console.log("Hello from a function called myFunction");
+        }
+        myFunction();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+.main{
+
+}
+.border{
+    background-color:yellow;
+    font-size: 15px;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border-radius: 20px;
+    margin-left: 60px;
+    margin-right: 30px;
+}
+.heading{
+    background:gold;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.h3{
+
+    font-size: 30px;
+    color:blue;
+ 
+}
+.h4{
+   
+    font-size: 30px;
+    color:purple;
+  
+}
+.li{
+    font-size: 30px;
+    margin-left: 120px;
+}

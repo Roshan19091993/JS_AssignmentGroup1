@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Output method</title>
+    <style>
+        li{
+            font-size:65px;
+            background-color: yellow;
+        }
+        button{
+            padding: 25px;
+            width: 400px;
+            font-size: 30px;
+            background-color:gray ;
+            color:white;
+            margin-top: 1px;
+            margin-left: 240px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .display{
+            width: 500px;
+            height: 100px;
+            border: 3px solid black;
+            margin-left: 200px;
+            padding: 20px;
+            font-size: 35px;
+            text-align: center;
+            overflow: auto;
+            background-color: yellow;
+            margin-top: 200px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <li> 3. JavaScript Output
+        Assignment:
+        Use console.log(), alert(), and document.write() to display a message. Write a function
+         that shows a greeting message using each method and explain when to use each output method.
+    </li>
+    <div class="display"  id="display">
+    </div>
+    <button onclick="displayMessage()"> Show</button>
+    <script>
+       
+
+        function displayMessage (){
+            const message = "Hello, world  welcome to JS OUTPUT method"
+             // console.log() is used to display messages in the browser console.
+        console.log(message);
+        
+        // alert() is used to display a message in an alert box.
+        alert(message);
+        
+        // document.write() is used to display messages directly in the HTML document.
+        document.getElementById("display").innerHTML= message;
+        } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>difference between  var and let</title>
+    <style>
+            li{
+            font-size:55px;
+            background-color: yellow;
+          }
+    </style>
+</head>
+<body>
+    <li>8. JavaScript Let
+        Assignment:
+        Create a program that demonstrates the difference
+         between var and let. 
+         Use both declarations in a function and show how the scope differs.
+    </li>
+
+    <script>
+        // function to demonstrate the difference between var and let
+        function displayScope() {
+            //using var inside a function
+            var x = 10;
+            
+            //using let inside a function
+            let y = 20;
+            
+            console.log("Inside function var x: " + x); // Output: var variable
+            console.log("Inside function let y: " + y); // Output: let variable
+
+            //block scope example
+            if(true){
+
+                var x=30;
+                let y=40;
+
+                console.log("Inside block var x: " + x); // Output: block scope variable
+                console.log("Inside block let y: " + y); // Output: block scope variable
+            }
+            console.log("outside block insside the function both variables are AFTER the IF block")
+            console.log("var x: " + x); // Output: var variable
+            console.log("let y: " + y); // Output: let variable
+
+        }
+        
+        displayScope();
+
+        // Attempting to access variables outside the function
+        try {
+            console.log(x); // ReferenceError: x is not defined (since 'x' is function-scoped)
+        } catch (error) {
+            console.log("Error accessing x outside the function:", error.message);
+        }
+
+        try {
+            console.log(y); // ReferenceError: y is not defined (since 'y' is function-scoped)
+        } catch (error) {
+            console.log("Error accessing y outside the function:", error.message);
+        }
+    </script>
+    
+</body>
+</html>
